@@ -10,7 +10,7 @@ module Chronic
     end
 
     def self.find_next_season(season, pointer)
-      lookup = [:spring, :summer, :autumn, :winter]
+      lookup = [:spring, :summer, :autumn, :winter, :fall]
       next_season_num = (lookup.index(season) + 1 * pointer) % 4
       lookup[next_season_num]
     end

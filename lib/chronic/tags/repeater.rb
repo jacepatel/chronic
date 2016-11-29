@@ -27,7 +27,8 @@ module Chronic
       {
         /^springs?$/ => :spring,
         /^summers?$/ => :summer,
-        /^(autumn)|(fall)s?/ => :autumn,
+        /^autumns?/ => :autumn,
+        /^falls?/ => :fall,
         /^winters?$/ => :winter
       }, options
     end

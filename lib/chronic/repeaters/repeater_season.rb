@@ -5,6 +5,7 @@ module Chronic
       :spring => Season.new(MiniDate.new(3,20), MiniDate.new(6,20)),
       :summer => Season.new(MiniDate.new(6,21), MiniDate.new(9,22)),
       :autumn => Season.new(MiniDate.new(9,23), MiniDate.new(12,21)),
+      :fall => Season.new(MiniDate.new(9,23), MiniDate.new(12,21)),
       :winter => Season.new(MiniDate.new(12,22), MiniDate.new(3,19))
     }
 
@@ -77,7 +78,7 @@ module Chronic
     end
 
     def find_current_season(md)
-      [:spring, :summer, :autumn, :winter].find do |season|
+      [:spring, :summer, :autumn, :winter, :fall].find do |season|
         md.is_between?(SEASONS[season].start, SEASONS[season].end)
       end
     end
